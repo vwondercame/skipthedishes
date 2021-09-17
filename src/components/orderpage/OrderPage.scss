@@ -1,17 +1,17 @@
 @use '../partials/_mixin' as *;
 @use '../partials/variables' as *;
-.order-page{
-    background-color: #f5f1f1;
-    height: 100vh;
-    width: 100%;
+.order-page {
+  background-color: #f5f1f1;
+  height: 100vh;
+  width: 100%;
 }
 .order {
   &__week {
     display: flex;
     width: 100%;
     position: relative;
-    justify-content: space-between;
-
+    justify-content: center;
+    z-index: 1;
   }
 
   &__date-container {
@@ -21,8 +21,8 @@
     background-color: #fff;
     border: 1px solid black;
     border-radius: 5px;
-    width: 2.7rem;
-    height: 2.9rem;
+    width: 45px;
+    height: 54px;
     justify-content: center;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease,
@@ -30,17 +30,18 @@
     position: relative;
     color: black;
     border: none;
+    margin-right: 0.33rem;
 
     &:hover {
-		transform: translateY(1rem);
-		box-shadow: 0px 2px 5px rgba(86, 84, 77, 0.21);
-        color: #fff;
-		background-color: lighten(#FF7D23, 2%);
-	}
+      transform: translateY(1rem);
+      box-shadow: 0px 2px 5px rgba(86, 84, 77, 0.21);
+      color: #fff;
+      background-color: lighten(#ff7d23, 2%);
+    }
 
-    &--wednesday{
-        color: white;
-        background-color: $delivery-info;
+    &--wednesday {
+      color: white;
+      background-color: $delivery-info;
     }
   }
 
@@ -51,27 +52,107 @@
     font-weight: 500;
   }
 
+  &__schedule-content {
+    background-color: white;
+    margin: 0 auto;
+    width: 100vw;
+    height: 269px;
+    position: relative;
+    margin-bottom: 3rem;
 
-    &__select-text {
-        margin-bottom: 1rem;
+    &--container{
+      width: 90vw;
+      margin: 0 auto;
+      padding-top: 1rem;
     }
 
-    &__time-container {
-        display: flex;
-        align-items: center;
+    &-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    &-subtitle {
+      font-weight: 600;
+      padding-top: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__select-text {
+    margin-bottom: 1rem;
+  }
+
+  &__time-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__time {
+    margin-right: 1.2rem;
+    height: 36px;
+    width: 73px;
+    border-radius: 6px;
+    border: 2px solid lightgrey;
+
+    &--hour {
+      width: 130px;
+      height: 36px;
+      border-radius: 6px;
+      border: 2px solid lightgrey;
+    }
+  }
+
+  &__discount {
+    color: #11a631;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    border: none;
+    background: $main-checkout;
+    color: white;
+    font-family: roboto;
+    font-weight: 600;
+    width: 172px;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 20px;
+  }
+
+  &__footer{
+    width: 100vw;
+    height: 50px;
+    background-color: #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+
+    &--orange{
+      background-color: $main-checkout;
+      width: 100vw;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
     }
 
-    &__time {
-        margin-right: 1.2rem;
-        height: 1.5rem;
 
-        &--hour {
-            width: 7rem;
-        }
-    }
-
-    &__discount {
-        color: #11A631;
-        margin: 0;
-    }
+    &-link{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }  
+  }
 }

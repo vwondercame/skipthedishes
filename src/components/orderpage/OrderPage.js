@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import OrderPageHeader from '../orderpageheader/OrderPageHeader'
 import OrderPageFoodCard from '../orderpagefoodcard/OrderPageFoodCard'
 import './OrderPage.scss'
+import {Link} from 'react-router-dom'
+import react from 'react';
 
 class OrderPage extends Component {
 
     state = {
         displaySchedule: false,
+        bgColor: "grey"
     }
 
     showSchedule = () => {
@@ -60,9 +63,11 @@ class OrderPage extends Component {
                 {this.state.displaySchedule &&
                 <>
                     <section className="order__schedule"/>
-                        <h2>Wednesday</h2>
-                        <p className="order__select-text">Select Delivery Time:</p>
-                        <div className="order__time-container">
+                    <div className="order__schedule-content">
+                    <div className="order__schedule-content--container">
+                    <h2 className="order__schedule-title">Wednesday</h2>
+                    <p className="order__schedule-subtitle">Select Delivery Time:</p>
+                    <div className="order__time-container">
                             <select className="order__time order__time--hour" name="timer">
                                 <option>---</option>
                                 <option>12:00</option>
@@ -96,10 +101,17 @@ class OrderPage extends Component {
                                 <option>PM</option>
                             </select>
                             <p className="order__discount">-10%</p>
-                            <button className="order__button">ADD TO DAY</button>
+                            <button onClick={()=>{this.setState({bgColor:"orange"})}} className="order__button">ADD TO DAY</button>
+                        </div>
+                        </div>
                         </div>
                 </>
                 }
+                <section className= { this.state.bgColor==="grey" ? "order__footer": "order__footer--orange"} >
+                    <Link to="/orderList" className="order__footer-link">
+                    Add to Mealplan
+                    </Link>
+                </section>
             </div>
             </>
         )
