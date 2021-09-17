@@ -25,28 +25,28 @@ function OrderList() {
 
   const handleCounter2 = (condition) => {
     if (condition === "plus") {
-      setCounter2(counter1 + 1);
+      setCounter2(counter2 + 1);
     }
     if (condition === "minus") {
-      setCounter2(counter1 - 1);
+      setCounter2(counter2 - 1);
     }
   };
 
   const handleCounter3 = (condition) => {
     if (condition === "plus") {
-      setCounter3(counter1 + 1);
+      setCounter3(counter3 + 1);
     }
     if (condition === "minus") {
-      setCounter3(counter1 - 1);
+      setCounter3(counter3 - 1);
     }
   };
 
   const handleCounter4 = (condition) => {
     if (condition === "plus") {
-      setCounter4(counter1 + 1);
+      setCounter4(counter4 + 1);
     }
     if (condition === "minus") {
-      setCounter4(counter1 - 1);
+      setCounter4(counter4 - 1);
     }
   };
 
