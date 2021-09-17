@@ -2,12 +2,21 @@ import React, {Component} from 'react';
 import OrderPageHeader from '../orderpageheader/OrderPageHeader'
 import OrderPageFoodCard from '../orderpagefoodcard/OrderPageFoodCard'
 import './OrderPage.scss'
+import {Link} from 'react-router-dom'
+import react from 'react';
 
 class OrderPage extends Component {
 
     state = {
         displaySchedule: false,
+        bgColor: ""
     }
+
+    // boxClick = (e) => {
+    //     this.setState({
+    //         bgColor: "orange"
+    //     })
+    // }
 
     showSchedule = () => {
         this.setState({
@@ -61,6 +70,7 @@ class OrderPage extends Component {
                 <>
                     <section className="order__schedule"/>
                     <div className="order__schedule-content">
+                    <div className="order__schedule-content--container">
                     <h2 className="order__schedule-title">Wednesday</h2>
                     <p className="order__schedule-subtitle">Select Delivery Time:</p>
                     <div className="order__time-container">
@@ -100,8 +110,14 @@ class OrderPage extends Component {
                             <button className="order__button">ADD TO DAY</button>
                         </div>
                         </div>
+                        </div>
                 </>
                 }
+                <section className="order__footer" >
+                    <Link to="/orderList" className="order__footer-link">
+                    Add to Mealplan
+                    </Link>
+                </section>
             </div>
             </>
         )
