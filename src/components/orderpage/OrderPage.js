@@ -9,14 +9,8 @@ class OrderPage extends Component {
 
     state = {
         displaySchedule: false,
-        bgColor: ""
+        bgColor: "grey"
     }
-
-    // boxClick = (e) => {
-    //     this.setState({
-    //         bgColor: "orange"
-    //     })
-    // }
 
     showSchedule = () => {
         this.setState({
@@ -107,13 +101,13 @@ class OrderPage extends Component {
                                 <option>PM</option>
                             </select>
                             <p className="order__discount">-10%</p>
-                            <button className="order__button">ADD TO DAY</button>
+                            <button onClick={()=>{this.setState({bgColor:"orange"})}} className="order__button">ADD TO DAY</button>
                         </div>
                         </div>
                         </div>
                 </>
                 }
-                <section className="order__footer" >
+                <section className= { this.state.bgColor==="grey" ? "order__footer": "order__footer--orange"} >
                     <Link to="/orderList" className="order__footer-link">
                     Add to Mealplan
                     </Link>

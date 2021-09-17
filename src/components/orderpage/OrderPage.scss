@@ -134,6 +134,17 @@
     position: absolute;
     bottom: 0;
 
+    &--orange{
+      background-color: $main-checkout;
+      width: 100vw;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+    }
+
 
     &-link{
         text-decoration: none;
