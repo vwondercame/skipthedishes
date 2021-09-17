@@ -38,4 +38,5 @@ function OrderPage() {
             </div>
         </section>
         </div>
-
+    )}
+export default OrderPage
