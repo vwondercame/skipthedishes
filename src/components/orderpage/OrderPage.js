@@ -1,9 +1,13 @@
-import React from 'react';
-import './OrderPage.scss';
-
+import React from 'react'
+import OrderPageHeader from '../orderpageheader/OrderPageHeader'
+import OrderPageFoodCard from '../orderpagefoodcard/OrderPageFoodCard'
+import './OrderPage.scss'
 function OrderPage() {
     return (
-        <section className="order__week">
+        <div className="order-page">
+            <OrderPageHeader></OrderPageHeader>
+            <OrderPageFoodCard></OrderPageFoodCard>
+      <section className="order__week">
             <div className="order__date-container">
                 <div className="order__day">Mon</div>
                 <div className="order__day">20</div>
@@ -33,7 +37,5 @@ function OrderPage() {
                 <div className="order__day">26</div>
             </div>
         </section>
-    )
-}
+        </div>
 
-export default OrderPage
