@@ -24,6 +24,9 @@ class OrderPage extends Component {
     render() {
         return (
             <>
+            <div className="order-page">
+                <OrderPageHeader></OrderPageHeader>
+                <OrderPageFoodCard></OrderPageFoodCard>
                 <section className="order__week">
                     <div className="order__date-container">
                         <div className="order__day">Mon</div>
@@ -94,6 +97,7 @@ class OrderPage extends Component {
                         <button className="order__button">ADD TO DAY</button>
                     </div>
                 </section>
+            </div>
             </>
         )
     }
