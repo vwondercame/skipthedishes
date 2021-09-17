@@ -1,0 +1,42 @@
+@use '../partials/variables' as *;
+@use '../partials/mixin' as *;
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: white;
+}
+
+.logo{
+width: 5rem;
+}
+
+.profile{
+    width: 2rem;
+}
+
+@include tablet{
+    .header{
+        padding: 1rem 2rem;
+    }
+
+    .logo{
+        width: 7rem;
+    }
+
+    .profile{
+        width: 3rem;
+    }
+}
+
+@include desktop{
+  .logo{
+      width: 7.5rem;
+  }
+
+  .profile{
+    width: 3.5rem;
+  }
+}
