@@ -5,6 +5,9 @@ import './OrderPage.scss'
 function OrderPage() {
     return (
         <>
+        <div className="order-page">
+            <OrderPageHeader></OrderPageHeader>
+            <OrderPageFoodCard></OrderPageFoodCard>
             <section className="order__week">
                 <div className="order__date-container">
                     <div className="order__day">Mon</div>
@@ -75,6 +78,7 @@ function OrderPage() {
                     <button className="order__button">ADD TO DAY</button>
                 </div>
             </section>
+            </div>
         </>
     )
 }
