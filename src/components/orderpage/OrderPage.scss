@@ -25,4 +25,27 @@
             color: $background-colour;
         }
     }
+
+    &__select-text {
+        margin-bottom: 1rem;
+    }
+
+    &__time-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__time {
+        margin-right: 1.2rem;
+        height: 1.5rem;
+
+        &--hour {
+            width: 7rem;
+        }
+    }
+
+    &__discount {
+        color: #11A631;
+        margin: 0;
+    }
 }
