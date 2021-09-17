@@ -2,27 +2,48 @@
 @use '../partials/variables' as *;
 
 .order {
-    &__week {
-        display: flex;
-        width: 100%;
-        position: relative;
-        justify-content: space-between;
-    }
+  &__week {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
 
-    &__date-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        border: 1px solid black;
-        border-radius: 5px;
-        width: 2.7rem;
-        height: 2.9rem;
-        justify-content: center;
+  }
 
-        &:hover {
-            background-color: $main-checkout;
-            color: $background-colour;
-        }
+  &__date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 2.7rem;
+    height: 2.9rem;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+    position: relative;
+    color: black;
+    border: none;
+
+    &:hover {
+		transform: translateY(1rem);
+		box-shadow: 0px 2px 5px rgba(86, 84, 77, 0.21);
+        color: #fff;
+		background-color: lighten(#FF7D23, 2%);
+	}
+
+    &--wednesday{
+        color: white;
+        background-color: $delivery-info;
     }
+  }
+
+  &__day {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
 }

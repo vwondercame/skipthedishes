@@ -12,7 +12,7 @@ function OrderPage() {
                 <div className="order__day">Tues</div>
                 <div className="order__day">21</div>
             </div>
-            <div className="order__date-container">
+            <div className="order__date-container order__date-container--wednesday">
                 <div className="order__day">Wed</div>
                 <div className="order__day">22</div>
             </div>
