@@ -1,11 +1,14 @@
 import React from 'react'
-
-function orderpage() {
+import OrderPageHeader from '../orderpageheader/OrderPageHeader'
+import OrderPageFoodCard from '../orderpagefoodcard/OrderPageFoodCard'
+import './OrderPage.scss'
+function OrderPage() {
     return (
-        <div>
-            
+        <div className="order-page">
+            <OrderPageHeader></OrderPageHeader>
+            <OrderPageFoodCard></OrderPageFoodCard>
         </div>
     )
 }
 
-export default orderpage
+export default OrderPage

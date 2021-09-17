@@ -1,6 +1,6 @@
 import React from 'react'
 
-function orderlist() {
+function OrderList() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function orderlist() {
     )
 }
 
-export default orderlist
+export default OrderList
