@@ -1,5 +1,32 @@
+@use '../partials/_mixin' as *;
+@use '../partials/variables' as *;
 .order-page{
     background-color: #f5f1f1;
     height: 100vh;
     width: 100%;
+}
+.order {
+    &__week {
+        display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__date-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 2.7rem;
+        height: 2.9rem;
+        justify-content: center;
+
+        &:hover {
+            background-color: $main-checkout;
+            color: $background-colour;
+        }
+    }
 }
