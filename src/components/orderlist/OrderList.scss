@@ -1,0 +1,118 @@
+@use '../partials/_mixin' as *;
+@use '../partials/variables' as *;
+
+.order-list{
+    background-color: #fcf8f8;
+    padding-bottom: 5rem;
+    &__header{
+        padding: 0 1.5rem 1rem;
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        top: 4.5rem;
+    }
+
+    &__text1{
+        margin: 0;
+        font-weight: 200;
+        font-size: 1.7rem;
+    }
+
+    &__text2{
+        margin: 0.3rem 0 0 0;
+        font-weight: 300;
+        font-size: 1.9rem;
+    }
+}
+
+.order-list-main{
+
+    &__date{
+        background-color: #f9e6cd;
+        padding: 0 1.5rem;
+        margin-top: 4rem;
+        &:first-child{
+            margin-top: 11rem;
+        }
+        &--text{
+            margin-top: 0;
+            padding: 0.5rem 0;
+            font-size: 1.9rem;
+            font-weight: 500;
+        }
+    }
+
+    &__ul{
+        padding: 0;
+        text-decoration: none;
+    }
+
+    &__li{
+        text-decoration: none;
+        padding: 0 1.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+
+    &__menu{
+        width: 100%;
+    }
+
+    &__item{
+        padding: 0 0.5rem;
+        width: 96%;
+        margin-bottom: 0;
+    }
+
+    &__button{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fc7a08;
+        border: none;
+        height: 3.5rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+.click-counter{
+    
+display: flex;
+position: absolute;
+justify-content: space-between;
+align-items: center;
+width: 6.9rem;
+right: 3.8rem;
+bottom: 2.07rem;
+
+    &__minus{
+        background-color: #fc7a0800;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 2;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__count{
+        background-color: white;
+        width: 1.8rem;
+        height: 1.6rem;
+        z-index: 2;
+        text-align: center;
+        padding-top: 0.3rem;
+    }
+
+    &__plus{
+        background-color: #fc7a0800;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 2;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
