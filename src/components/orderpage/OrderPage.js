@@ -9,7 +9,8 @@ class OrderPage extends Component {
 
     state = {
         displaySchedule: false,
-        bgColor: "grey"
+        bgColor: "grey",
+        wedColor: "white"
     }
 
     showSchedule = () => {
@@ -39,7 +40,7 @@ class OrderPage extends Component {
                         <div className="order__day">Tues</div>
                         <div className="order__day">21</div>
                     </div>
-                    <div className="order__date-container" onClick = {() => this.showSchedule()}>
+                    <div className={ this.state.wedColor==="white" ? "order__date-container": "order__date-container--blue"} onClick = {() => this.showSchedule()}>
                         <div className="order__day">Wed</div>
                         <div className="order__day">22</div>
                     </div>
@@ -101,7 +102,7 @@ class OrderPage extends Component {
                                 <option>PM</option>
                             </select>
                             <p className="order__discount">-10%</p>
-                            <button onClick={()=>{this.setState({bgColor:"orange"})}} className="order__button">ADD TO DAY</button>
+                            <button onClick={()=>{this.setState({bgColor:"orange", wedColor:"blue"})}} className="order__button">ADD TO DAY</button>
                         </div>
                         </div>
                         </div>
