@@ -10,11 +10,11 @@
 }
 
 .logo{
-width: 5rem;
+width: 7rem;
 }
 
 .profile{
-    width: 2rem;
+    width: 2.5rem;
 }
 
 @include tablet{
@@ -23,7 +23,7 @@ width: 5rem;
     }
 
     .logo{
-        width: 7rem;
+        width: 9rem;
     }
 
     .profile{
@@ -33,7 +33,7 @@ width: 5rem;
 
 @include desktop{
   .logo{
-      width: 7.5rem;
+      width: 9.5rem;
   }
 
   .profile{
